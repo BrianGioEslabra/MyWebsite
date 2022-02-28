@@ -4,6 +4,7 @@
   position: fixed;
   top: 0px;
 	width: 100%;
+  height: auto;
 	background-color: white;
   z-index: 1;
 }
@@ -16,10 +17,11 @@
   opacity: 0.9;
 }
 ul {
+  display: inline-block;
+  text-align: left;
   list-style-type: none;
   padding: 1%;
   overflow: hidden;
-  margin-left: 150px;
 }
 li {
   float: left;
@@ -147,6 +149,8 @@ hr {
   background-color: #EAF6F6;
   padding-top: 50px;
   position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .middle-container {
   margin: 100px 0;
@@ -176,6 +180,9 @@ hr {
   width: 25%;
   float: right;
   margin-left: 30px;
+}
+.flaticon {
+  opacity: 0.3;
 }
 .intro {
   width: 30%;

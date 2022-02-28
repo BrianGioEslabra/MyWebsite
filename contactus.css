@@ -1,8 +1,11 @@
 body {
   overflow-x: hidden;
+  background-color: ghostwhite;
+  text-align: center;
 }
 .header {
   position: fixed;
+  text-align: center;
   top: 0px;
   width: 100%;
   height: auto;
@@ -10,10 +13,11 @@ body {
   z-index: 1;
 }
 ul {
+  display: inline-block;
+  text-align: center;
   list-style-type: none;
   padding: 15px;
   overflow: hidden;
-  margin-left: 150px;
 }
 li {
   float: left;
@@ -46,9 +50,9 @@ li a {
 }
 h1 {
   position: relative;
-  top: 20px;
   font-family: arial;
   font-size: 2vw;
+  top: 20%;
 }
 input[type=text], input[type=password] {
   position: relative;
@@ -61,7 +65,7 @@ input[type=text], input[type=password] {
   width: 25%;
   height: 8%;
 }
-.button {
+button {
   position: relative;
   top: 20px;
   background-color: steelblue;
@@ -77,7 +81,7 @@ input[type=text], input[type=password] {
   width: 15%;
   height: 13%;
 }
-.button:hover {
+button:hover {
   opacity: 0.8;
 }
 .map {

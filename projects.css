@@ -83,7 +83,8 @@ h3 {
 
 /**FOOTER**/
 .footer-link {
-  font-size: 25px;
+  font-family: verdana;
+  font-size: 1rem;
   color: #11999E;
   margin:10px 20px;
   text-decoration: none;

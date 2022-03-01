@@ -117,7 +117,8 @@ a:hover {
 }
 
 .footer-link {
-  font-size: 25px;
+  font-family: verdana;
+  font-size: 1rem;
   color: #11999E;
   margin:10px 20px;
   text-decoration: none;
@@ -140,7 +141,7 @@ a:hover {
   opacity: 0.3;
   text-decoration: none;
   font-family: verdana;
-  font-size: 1.5vw;
+  font-size: 1rem;
   line-height: 20px;
 }
 .intro {
@@ -177,5 +178,7 @@ a:hover {
    .greeting {
      font-size: 1.2rem;
    }
-
+   .flaticon-attribute {
+     font-size: 0.5rem;
+   }
 }

@@ -1,6 +1,12 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   text-align: center;
 }
+
 .header {
   position: fixed;
   text-align: center;
@@ -10,39 +16,32 @@ body {
   background-color: aqua;
   z-index: 1;
 }
-ul {
-  display: inline-block;
-  text-align: left;
-  list-style-type: none;
-  padding: 15px;
-  overflow: hidden;
-}
-li {
-  float: left;
-  margin-right: 15px;
-  margin-left: 15px;
-}
-li:hover {
-  background-color: white;
-  height: 0.5vw;
-}
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
+.header a {
+  flex: 1;
+  display: inline-block;
+  margin: 40px 20px 20px 20px;
+  padding: 1.5vw 0.8vw;
   text-decoration: none;
   font-family: arial;
-  font-size: 1.5vw;
+  font-size: 1.3rem;
   color: black;
+  width: fit-content;
 }
+
+.header a:hover {
+  color: ghostwhite;
+  text-decoration: overline;
+  text-decoration-thickness: 5px;
+}
+
 .container {
+  position: relative;
   margin: 200px auto 100px auto;
   height: auto;
   width: 47%;
   background-color: white;
-  box-shadow: 0 0 1px;
+  align: center;
 }
 
 .personal {
@@ -51,33 +50,28 @@ li a {
   height: auto;
   font-family: verdana;
 }
-.profile {
-  position: relative;
-  top: 100%;
-  width: auto;
-  height: auto;
-}
 .me-img {
   position: relative;
   height: auto;
   width: 150px;
   border-radius: 100px;
-  padding: 25px;
-  margin-top: 10px;
+  margin-top: 10px auto 0 auto;
 }
 .paragraph {
   position: relative;
   top: 10%;
-  margin: 10px 40px 10px 40px;
+  margin: 10px 20px 10px 20px;
   font-family: verdana, serif;
   font-size: 1.25rem;
   text-indent: 3.125rem;
   text-align: justify;
   line-height: 1.6;
 }
+
 h1 {
    font-size: 1.5rem;
 }
+
 h2 {
   position: relative;
   top: 5%;
@@ -85,23 +79,7 @@ h2 {
   font-family: arial;
   color: steelblue;
 }
-.dropdown {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-  font-family: arial;
-  font-size: 1.5vw;
-  color: black;
-}
-.dropdown-content {
-  width: auto;
-  display: none;
-  position: absolute;
-  z-index: 1;
-  border-radius: 5px;
-}
+
 /**FOOTER**/
 .footer-link {
   font-size: 25px;
@@ -123,10 +101,6 @@ h2 {
   padding: 20px 0;
 }
 
-.dropdown:hover .dropdown-content {
-  display: inline-block;
-  background-color: turquoise;
-}
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -139,4 +113,21 @@ h2 {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header a {
+    flex-basis: 50%;
+  }
+  .container {
+    width: 80%;
+  }
+  .paragraph {
+    font-size: 0.8rem;
+    text-indent: 1rem;
+  }
 }

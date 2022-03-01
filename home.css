@@ -1,108 +1,37 @@
-
+html, body {
+  padding: 0;
+  margin: 0;
 }
+
+
 .header {
+  position: sticky;
   text-align: center;
-  position: fixed;
   top: 0px;
-	width: 100%;
+  width: 100%;
   height: auto;
-	background-color: white;
+  background-color: ghostwhite;
   z-index: 1;
 }
-.container {
-  position: relative;
-  top: 12vw;
-  height: 70%;
-  width: 45%;
-  background-color: darkturquoise;
-  opacity: 0.9;
-}
-ul {
-  display: inline-block;
-  text-align: left;
-  list-style-type: none;
-  padding: 1%;
-  overflow: hidden;
-}
-li {
-  float: left;
-  margin-right: 15px;
-  margin-left: 15px;
-}
-li:hover {
-  background-color: turquoise;
-  height: 0.5vw;
-}
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
+.header a {
+  flex: 1;
+  display: inline-block;
+  margin: 40px 20px 20px 20px;
+  padding: 1.5vw 0.8vw;
   text-decoration: none;
   font-family: arial;
-  font-size: 1.5vw;
+  font-size: 1.3rem;
   color: black;
-}
-button {
-  position: relative;
-  top: 80px;
-  height: auto;
-  background-color: white;
-  color: steelblue;
-  padding: 15px;
-  cursor: pointer;
-  width: auto;
-  border-radius: 50px;
-  font-size: 1.5vw;
+  width: fit-content;
 }
 
-button:hover {
-  opacity: 0.8;
+.header a:hover {
+  color: darkturquoise;
+  text-decoration: overline;
+  text-decoration-thickness: 5px;
 }
-a {
-  text-decoration: none;
-  color: black;
-}
-.dropdown {
-  margin: 13px;
-  color: black;
-  font-family: arial;
-  font-size: 1.4vw;
-  display: inline-block;
-  font-size: 1.5vw;
-}
-.dropdown-content {
-  width: auto;
-  display: none;
-  position: absolute;
-  z-index: 1;
-  border-radius: 5px;
-}
-.dropdown:hover .dropdown-content {
-  display: inline-block;
-  background-color: turquoise;
-}
-.footer-link {
-  font-size: 25px;
-  color: #11999E;
-  margin:10px 20px;
-  text-decoration: none;
-}
-.footer-link:hover {
-  color: #EAF6F6;
-}
-.bottom-container {
-  background-color: #66BFBF;
-  padding: 50px 0 20px;
-  margin-top: 50px;
-}
-.copyright {
-  color: #EAF6F6;
-  font-size: 1.75rem;
-  padding: 20px 0;
-  text-align: center;
-}
+
 body {
   margin: 0;
   text-align: center;
@@ -137,41 +66,45 @@ hr {
   width: 4%;
   margin: 100px auto;
 }
+
+a {
+  color: #11999E;
+  margin:10px 20px;
+  text-decoration: none;
+}
+a:hover {
+  color: aqua;
+}
 .greeting {
   font-size: 1.5rem;
   font-family: verdana;
   color: black;
   font-weight: normal;
-  padding-bottom: 100px;
+  padding-bottom: 10vw;
 }
 .top-container {
-  background-image: url("bg.jpg") ;
-  margin-top:  10px;
-  background-color: #EAF6F6;
-  padding-top: 50px;
   position: relative;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  background-image: url("bg.jpg") ;
+  width: 100%;
+  margin-top: 0.5vw;
+  padding-top: 2.5vw;
+  bottom: 0;
 }
-.middle-container {
-  margin: 100px 0;
+ .middle-container {
+   margin: 60px 0 120px 0;
+ }
+.profile {
+  width: 70%;
+  margin: 50px auto 50px auto;
 }
+
 .skill-row {
   padding-top: 25px;
-  width: 50%;
+  width: 70%;
   text-align: left;
   margin: 50px auto 50px auto;
 }
-.top-cloud {
-  position: absolute;
-  right: 300px;
-  top: 40px;
-}
-.bottom-cloud {
-  position: absolute;
-  left: 250px;
-  bottom: 300px;
-}
+
 .computer {
   width: 25%;
   float: left;
@@ -182,20 +115,37 @@ hr {
   float: right;
   margin-left: 30px;
 }
-.flaticon {
-  opacity: 0.3;
-}
-.intro {
-  width: 30%;
-  margin: auto;
-}
-a {
+
+.footer-link {
+  font-size: 25px;
   color: #11999E;
   margin:10px 20px;
   text-decoration: none;
 }
-a:hover {
-  color: aqua;
+.footer-link:hover {
+  color: #EAF6F6;
+}
+.bottom-container {
+  background-color: #66BFBF;
+  padding: 50px 0 20px;
+  margin-top: 50px;
+}
+.copyright {
+  color: #EAF6F6;
+  font-size: 1.75rem;
+  padding: 20px 0;
+  text-align: center;
+}
+.flaticon-attribute {
+  opacity: 0.3;
+  text-decoration: none;
+  font-family: verdana;
+  font-size: 1.5vw;
+  line-height: 20px;
+}
+.intro {
+  width: 100%;
+  margin: auto;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -209,4 +159,23 @@ a:hover {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+
+@media screen and (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header a {
+    flex-basis: 50%;
+  }
+   h1 {
+     font-size: 4.5rem;
+     line-height: 1;
+   }
+   .greeting {
+     font-size: 1.2rem;
+   }
+
 }

@@ -181,4 +181,7 @@ a:hover {
    .flaticon-attribute {
      font-size: 0.5rem;
    }
+   .computer, .chilli {
+     width: 40%;
+   }
 }
